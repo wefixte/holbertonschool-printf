@@ -2,7 +2,6 @@
 
 /**
  * _getprintfunctions - search for a specifier and the function linked to it
- * 
  * Return: the function linked to the specifier or NULL
 */
 
