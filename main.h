@@ -27,5 +27,6 @@ int _putchar(char c);
 int _printcharacter(va_list ListArguments);
 int _printpercent(va_list ListArguments);
 int _printstring(va_list ListArguments);
+int (*_getprintfunctions(const char *nextcharacter))(va_list);
 
 #endif

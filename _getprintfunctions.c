@@ -6,7 +6,7 @@
  * Return: the function linked to the specifier or NULL
 */
 
-int (*_getprintfunctions(char *nextcharacter))(va_list)
+int (*_getprintfunctions(const char *nextcharacter))(va_list)
 {
 	/*tableau structure spectifiers*/
 	specifierhelp_t structformat[] = {
@@ -18,16 +18,12 @@ int (*_getprintfunctions(char *nextcharacter))(va_list)
 
 	int index = 0;
 
-	while
+	/*TODO : loop in structure format to find a match & return fonction*/
+	while (structformat[index].specifier != '\0')
 	{
-		/*TODO : loop in structure format to find a match & return fonction*/
-		while (structformat[index].specifier != '\0')
-		{
-			if (*nextcharacter == structformat[index].specifier)
-				return (structformat[index].function);
-			index++;
-		}
-		else
-			return (NULL);
+		if (*nextcharacter == structformat[index].specifier)
+			return (structformat[index].function);
+		index++;
 	}
+	return (NULL);
 }
