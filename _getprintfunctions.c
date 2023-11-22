@@ -6,9 +6,15 @@
  * Return: the function linked to the specifier or NULL
 */
 
-int (*getprintfunctions)(va_list)
+int (*getprintfunctions(char *nextcharacter))(va_list)
 {
-	/*TODO : tableau structure spectifiers*/
+	/*tableau structure spectifiers*/
+	specifierhelp_t structformat[] = {
+		{'c', _printcharacter},
+		{'s', _printstring},
+		{'%', _printpercent},
+		{'\0', NULL}
+	}
 
 	while
 	{
