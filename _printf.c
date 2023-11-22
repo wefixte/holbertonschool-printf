@@ -25,9 +25,18 @@ int _printf(const char *format, ...)
 			{
 				length = length + function(ListArguments)
 			}
-			
-		}		
+			else
+			{
+			/*TODO: cas normal où il faut putchar le character si le specifiers n'existe pas*/
+			}
+		}
+		else
+		{
+		/*TODO: cas où il faut juste afficher le caractère qui n'est pas un specifier*/
+		/*and incrementer length*/
+		}
+		format++;
 	}
-
 	va_end(ListArguments);
+	return (length);
 }
