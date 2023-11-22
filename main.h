@@ -9,23 +9,23 @@
 
 /*Structure*/
 /**
- * specifier_structure - structure for specifier characters
- * @specifier: character 
+ * struct specifier_structure - structure for specifier characters
+ * @specifier: character
  * @function: function pointer to the adequate function
 */
 
 typedef struct specifier_structure
 {
-    char specifier;
-    int (*function)(va_list);
-        /* data */
+	char specifier;
+	int (*function)(va_list);
+		/* data */
 } specifierhelp_t;
 
 /*Prototypes*/
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _printcharacter(va_list ListArguments);
-int _printpercent (va_list ListArguments);
-int _printstring (va_list ListArguments);
+int _printpercent(va_list ListArguments);
+int _printstring(va_list ListArguments);
 
 #endif
