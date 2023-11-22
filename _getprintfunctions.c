@@ -15,12 +15,16 @@ int (*getprintfunctions(char *nextcharacter))(va_list)
 		{'\0', NULL}
 	}
 
+	int index = 0;
+
 	while
 	{
 		/*TODO : boucler dans la structure format pour trouver un match et return la fonction*/
-		if()
+		while(structformat[index].specifier != '\0')
 		{
-
+			if(*nextcharacter = structformat[index].specifier)
+				return (structformat[index].function);
+			index++;
 		}
 		else
 			return (NULL);
