@@ -14,26 +14,31 @@ int _printf(const char *format, ...)
 
 	va_start(ListArguments, format);
 
-	while(*format)
+	while (*format)
 	{
-		if(*format == %)
+		if (*format == '%')
 		{
 			format++;
 			function = _getprintfunctions(format);
-			
+
 			if (function != NULL)
 			{
-				length = length + function(ListArguments)
+				length = length + function(ListArguments);
 			}
 			else
 			{
-			/*TODO: cas normal où il faut putchar le character si le specifiers n'existe pas*/
+			/*cas où il faut putchar le character si le specifiers n'existe pas*/
+				_putchar('%');
+				_putchar(*format);
+				length = length + 2;
 			}
 		}
 		else
 		{
-		/*TODO: cas où il faut juste afficher le caractère qui n'est pas un specifier*/
+		/*cas où il faut juste afficher le caractère qui n'est pas un specifier*/
 		/*and incrementer length*/
+			_putchar(*format);
+			length++;
 		}
 		format++;
 	}
