@@ -1,18 +1,27 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/*Library functions*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
 
-typedef struct specifier _structure
+/*Structure*/
+/**
+ * specifier_structure - structure for specifier characters
+ * @specifier: character 
+ * @function: function pointer to the adequate function
+*/
+
+typedef struct specifier_structure
 {
     char specifier;
     int (*function)(va_list);
         /* data */
 } specifierhelp_t;
 
+/*Prototypes*/
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _printcharacter(va_list ListArguments);
