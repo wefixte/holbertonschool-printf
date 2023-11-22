@@ -1,0 +1,22 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
+
+typedef struct specifier _structure
+{
+    char specifier;
+    int (*function)(va_list);
+        /* data */
+} specifierhelp_t;
+
+int _printf(const char *format, ...);
+int _putchar(char c);
+int _printcharacter(va_list ListArguments);
+int _printpercent (va_list ListArguments);
+int _printstring (va_list ListArguments);
+
+#endif
