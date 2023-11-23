@@ -29,5 +29,7 @@ int _printpercent(va_list ListArguments);
 int _printstring(va_list ListArguments);
 int (*_getprintfunctions(const char *nextcharacter))(va_list);
 int _printnumbers(va_list ListArguments);
+void _putnumbers(int number);
+int _counternumber(int number);
 
 #endif
