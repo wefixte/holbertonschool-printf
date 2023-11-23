@@ -13,6 +13,8 @@ int (*_getprintfunctions(const char *nextcharacter))(va_list)
 		{'c', _printcharacter},
 		{'s', _printstring},
 		{'%', _printpercent},
+		{'d', _printnumbers},
+		{'i', _printnumbers},
 		{'\0', NULL}
 	};
 
