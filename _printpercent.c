@@ -8,7 +8,8 @@
 
 int _printpercent(va_list ListArguments)
 {
-    (void) ListArguments;
-        _putchar('%');
-    return(1);
+	(void) ListArguments;
+
+	_putchar('%');
+	return (1);
 }
