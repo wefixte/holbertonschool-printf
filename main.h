@@ -18,7 +18,6 @@ typedef struct specifier_structure
 {
 	char specifier;
 	int (*function)(va_list);
-		/* data */
 } specifierhelp_t;
 
 /*Prototypes*/
