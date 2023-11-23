@@ -8,9 +8,9 @@
 
 int _printcharacter(va_list ListArguments)
 {
-    char character;
-    character = va_arg(ListArguments, int);
-    
-    _putchar(character);
-    return (1);
+	char character;
+
+	character = va_arg(ListArguments, int);
+	_putchar(character);
+	return (1);
 }
