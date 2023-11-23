@@ -18,7 +18,7 @@ int _printstring(va_list ListArguments)
     {
             _putchar(str[index]);
             index++;
-            count++;//IT COUNTS THE LENGTH OF STR//
+            count++;
     }
         return(count);
         
