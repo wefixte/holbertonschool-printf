@@ -14,11 +14,15 @@ int _printf(const char *format, ...)
 
 	va_start(ListArguments, format);
 
+	if (format == NULL)
+		return (-1);
+
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
+			/*put the function according to specifier, in a function pointer*/
 			function = _getprintfunctions(format);
 
 			if (function != NULL)
@@ -27,7 +31,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-			/*cas où il faut putchar le character si le specifiers n'existe pas*/
+			/*if the specifier does not exist, putchar the character and %*/
 				_putchar('%');
 				_putchar(*format);
 				length = length + 2;
@@ -35,8 +39,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-		/*cas où il faut juste afficher le caractère qui n'est pas un specifier*/
-		/*and incrementer length*/
+		/*if character not %, and incrementation length*/
 			_putchar(*format);
 			length++;
 		}
