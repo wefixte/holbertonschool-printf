@@ -15,11 +15,11 @@ void _putnumbers(int number)
 	}
 
 	/*recursive function remove last digit of number*/
-	if (number/10)
-		_putnumbers(n/10)
+	if (number / 10)
+		_putnumbers(number / 10);
 
 	/*print last digit*/
-	_putchar(n%10 + '0');
+	_putchar(number % 10 + '0');
 }
 
 /**
@@ -35,7 +35,7 @@ int _counternumber(int number)
 	if (number == 0)
 		return (1);
 
-	while (number !=0)
+	while (number != 0)
 	{
 		number = number / 10;
 		counter++;
@@ -52,5 +52,7 @@ int _counternumber(int number)
 int _printnumbers(va_list ListArguments)
 {
 	int number = va_arg(ListArguments, int);
-	
+
+	_putnumbers(number);
+	return (_counternumber(number));
 }
