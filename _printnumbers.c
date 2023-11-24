@@ -53,9 +53,6 @@ int _printnumbers(va_list ListArguments)
 {
 	int number = va_arg(ListArguments, int);
 
-	if (number > INT_MAX || number < INT_MIN)
-		return (-1);
-  
 	_putnumbers(number);
 	return (_counternumber(number));
 }
