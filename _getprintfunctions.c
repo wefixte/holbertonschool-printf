@@ -8,7 +8,7 @@
 
 int (*_getprintfunctions(const char *nextcharacter))(va_list)
 {
-	/*tableau structure spectifiers*/
+	/*array structure spectifiers*/
 	specifierhelp_t structformat[] = {
 		{'c', _printcharacter},
 		{'s', _printstring},
@@ -20,7 +20,7 @@ int (*_getprintfunctions(const char *nextcharacter))(va_list)
 
 	int index = 0;
 
-	/*TODO : loop in structure format to find a match & return fonction*/
+	/*loop in structure format to find a match & return fonction*/
 	while (structformat[index].specifier != '\0')
 	{
 		if (*nextcharacter == structformat[index].specifier)

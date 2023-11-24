@@ -5,11 +5,12 @@
  * @ListArguments: list of arguments
  * Return: the length
 */
+
 int _printcharacter(va_list ListArguments)
 {
-    char cas;
-    cas = va_arg(ListArguments, int);
-        _putchar(cas);
-        return (1);
+	char character;
 
+	character = va_arg(ListArguments, int);
+	_putchar(character);
+	return (1);
 }
