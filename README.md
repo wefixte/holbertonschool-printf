@@ -36,7 +36,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ### Man page
 
 ```
-man man_3_printf
+man ./man_3_printf
 ```
 
 ### Exemples
